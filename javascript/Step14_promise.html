@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step14_promise.html</title>
+</head>
+<body>
+    <script>
+        //기상하는 함수
+        function wakeUp(callback){
+            setTimeout(() => {
+                console.log("1. 기상 완료");
+                callback();
+            }, 1000);
+        }
+
+        //밥먹는 함수
+        function eatBreakfast(){
+
+        }
+
+        //학교 가는 함수
+        function goToSchool(){
+
+        }
+
+        wakeUp(()=>{
+            eatBreakfast();
+        });
+        
+
+    </script>
+</body>
+</html>
