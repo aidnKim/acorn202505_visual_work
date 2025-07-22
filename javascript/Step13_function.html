@@ -8,24 +8,39 @@
 <body>
     <h1>다양한 모양의 함수</h1>
     <script>
+<<<<<<< HEAD
         //함수의 매개변수를 선언할때 default 값을 지정할수 있다.
         function showInfo(num=0, name="누구게", addr="어디게"){
             console.log(`num:${num} name:${name} addr:${addr}`);    
+=======
+        function showInfo(num=0, name="누구게", addr="어디게"){
+            console.log(`num:${num} name:${name} addr:${addr}`);
+>>>>>>> 7f08ea26eed5370000baab0c634c73572bfc625f
         }
 
         showInfo(1, "김구라", "노량진");
         showInfo();
 
+<<<<<<< HEAD
         // ...변수명 은 rest parameter 를 의미한다. 
+=======
+        // ...변수명 은 rest parameter 를 의미한다
+>>>>>>> 7f08ea26eed5370000baab0c634c73572bfc625f
         function printMsgs(...args){
             console.log(args);
         }
 
         printMsgs();
         printMsgs("hi");
+<<<<<<< HEAD
         printMsgs("hi","hello","bye");
 
         // object 안에 함수 
+=======
+        printMsgs("hi", "hello", "bye");
+
+        // object 안에 함수
+>>>>>>> 7f08ea26eed5370000baab0c634c73572bfc625f
         const myObj = {
             num:1,
             action:function(){
@@ -39,10 +54,16 @@
                 console.log("어떤 동작을 수행합니다!");
             },
             fly(){
+<<<<<<< HEAD
                 console.log("날라 다녀요!");
             }
         };
 
+=======
+                console.log("날라 다녀요!")
+            }
+        }
+>>>>>>> 7f08ea26eed5370000baab0c634c73572bfc625f
     </script>
 </body>
 </html>

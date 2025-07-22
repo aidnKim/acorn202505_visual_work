@@ -10,6 +10,7 @@
     <input type="file" id="fileInput" accept="image/*" multiple>
     <div id="preview"></div>
     <script>
+<<<<<<< HEAD
         //이미지 파일을 선택했을때 실행할 함수 등록
         document.querySelector("#fileInput").addEventListener("change", (e)=>{
             const files = e.target.files;
@@ -27,6 +28,24 @@
                     document.querySelector("#preview").insertAdjacentHTML("beforeend", img);
                 };
             };
+=======
+        //이미지 파일을 선택했을 때 실행할 함수 등록
+        document.querySelector("#fileInput").addEventListener("change", (e)=>{            
+            const files = e.target.files;            
+            const reader=new FileReader();           
+            reader.readAsDataURL(files[0]);            
+            reader.onload = () => {                    
+                const img=`<img src="${reader.result}">`;                
+                document.querySelector("#preview").insertAdjacentHTML("beforeend", img);
+                //1번방 이미지 로딩
+                const reader2=new FileReader();           
+                reader2.readAsDataURL(files[1]);            
+                reader2.onload = () => {                                
+                    const img=`<img src="${reader2.result}">`;                
+                    document.querySelector("#preview").insertAdjacentHTML("beforeend", img);
+                };
+            };    
+>>>>>>> 7f08ea26eed5370000baab0c634c73572bfc625f
         });
     </script>
 </body>
